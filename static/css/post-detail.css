@@ -1,0 +1,96 @@
+#post-detail-section {
+  margin-top: 80px;
+  display: flex;
+}
+
+.post_detail_container {
+  width: 90%;
+  margin-left: 40px;
+}
+
+.post_detail img {
+  width: 80%;
+  margin: 0 auto;
+}
+.post_detail .header-text {
+  font-size: 2rem;
+  text-align: center;
+  padding: 10px;
+  margin: 10px;
+}
+.post_detail .detail-texts {
+  font-size: 1.5rem;
+}
+
+/* comment desing */
+.post_detail_container .comments {
+  margin-top: 50px;
+}
+.post_detail_container .comments form {
+  padding: 10px;
+  margin: 10px;
+}
+
+.post_detail_container .comments form input,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 10px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+.post_detail_container .comments form button {
+  background-color: #209cee;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pre-comments {
+  width: 90%;
+  border: 1px solid #209cee;
+  border-radius: 10px 0 10px 0;
+  padding: 10px;
+  margin: 10px;
+  box-shadow: 5px 5px 5px 5px #888888;
+}
+.pre-comments .user-detail,
+.comment-text {
+  font-size: 1em;
+  margin: 5px;
+  padding: 5px;
+}
+/* end of comment section */
+
+/* social share links area */
+.social-share-links {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.social-share-links a {
+  display: block;
+  margin: 8px;
+  padding: 8px;
+  text-align: center;
+  transition: all 0.5s ease-in-out;
+}
+.social-share-links a:hover {
+  background-color: rgb(224, 204, 204);
+}
+.social-share-links a .fa-facebook-f {
+  color: #209cee;
+}
+.social-share-links a .fa-linkedin-in {
+  color: #209cee;
+}
+.social-share-links a .fa-envelope {
+  color: rgb(161, 78, 78);
+}
+/* end of social share links */
