@@ -19,7 +19,7 @@
 <body>
     <!-- header section starts -->
     <header>
-        <div id="logo"><a href="">Learnwithchandan</a>
+        <div id="logo"><a href={% url 'show_posts' %}>Learnwithchandan</a>
                <!-- for responsive -->
                <div class="mobile-icon">
                 <a href="#" >
@@ -33,7 +33,7 @@
             <div class="navbar">
                 <div class="nav-links">
                     <ul>
-                        <li><a href="">Posts</a></li>
+                        <li><a href="{% url 'show_posts'%}">Posts</a></li>
                         <li><a href="">Series</a></li>
                         <li><a href="">Research</a></li>
                         <li><a href="">Portfolio</a></li>
@@ -67,8 +67,8 @@
             {% for post in post_list%}
                 {% if post.draft is not True%}
                     <div class="posts">
-                        <div class="image">
-                            <img src="http://via.placeholder.com/200" alt="">
+                        <div class="image">                       
+                            <img src="http://via.placeholder.com/200" alt="">  
                         </div>
                             <h1>{{post.title}}</h1>
                         <div class="description-text">
@@ -92,12 +92,12 @@
 
         <div class="sidebar">
             <!-- search -->
-        <div class="blog-search">
+        <!-- <div class="blog-search">
                 <form action="" method="post">
                     <input type="text" placeholder="Search anything">
                     <button type="submit">Search</button>
                 </form>
-            </div>
+            </div> -->
             <!-- end of search -->
     
             <!-- starts of Latest posts -->
