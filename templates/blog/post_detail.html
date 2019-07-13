@@ -1,0 +1,74 @@
+
+{% extends 'blog/post_list.html' %}
+
+
+{% block detail%}
+   <!-- post detail section starts -->
+    <section id="post-detail-section">
+        <div class="post_detail_container">
+            <div class="post_detail">
+                    <div class="header-text">
+                         <h1>{{post.title}}</h1> 
+                    </div>
+               
+                <p><em>Posted By:{{post.author|title}},{{post.published_date|date}}</em></p>
+                <div class="detail-texts">
+                    {{post.detail}}
+                </div>
+            </div>
+
+                    <!-- comment area -->
+        <div class="comments">
+            <h1>Comment</h1>
+                <div class="pre-comments">
+                    <div class="user-detail">
+                        <p><b> Chandan sharma</b></p>
+                        <span><small>20 may</small></span>
+                    </div>
+                    <div class="comment-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem omnis tenetur a vel iure dolor? Nobis explicabo distinctio nesciunt incidunt.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, saepe voluptas! Aliquid similique, consectetur adipisci perferendis porro eveniet? Facere, tempora.
+                    </div>
+                </div>
+                <div class="pre-comments">
+                    <div class="user-detail">
+                        <p><b> Chandan sharma</b></p>
+                        <span><small>20 may</small></span>
+                    </div>
+                    <div class="comment-text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem omnis tenetur a vel iure dolor? Nobis explicabo distinctio nesciunt incidunt.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, saepe voluptas! Aliquid similique, consectetur adipisci perferendis porro eveniet? Facere, tempora.
+                    </div>
+                </div>
+                <h1>Write Your Comments</h1>
+                <form action="" method="post">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" placeholder="Enter your email">
+                    <span><small>**We dont publish your email</small></span><br/>
+    
+                    <label for="name">Name</label>
+                    <input type="text" id="name" placeholder="Enter your name">
+    
+                    <label for="comment-text">Comment</label>
+                    <textarea name="" id="comment-text" placeholder="awesome post..."></textarea>
+                    <button type="submit">submit</button>
+                </form>
+            </div>
+            <!-- end of comment area -->
+
+
+    
+   <!-- end of post detail section -->
+        </div>
+
+           
+        <!-- share section -->
+        <div class="social-share-links">
+                <a href=""><i class="fab fa-facebook-f"></i></a>
+                <a href=""><i class="fab fa-linkedin-in"></i></a>
+                <a href="">  <i class="fas fa-envelope"></i></a>       
+            </div>
+        <!-- end of share -->
+
+
+   {% endblock %}
