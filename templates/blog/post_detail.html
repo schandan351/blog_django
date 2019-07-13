@@ -19,27 +19,20 @@
 
                     <!-- comment area -->
         <div class="comments">
-            <h1>Comment</h1>
-                <div class="pre-comments">
-                    <div class="user-detail">
-                        <p><b> Chandan sharma</b></p>
-                        <span><small>20 may</small></span>
+            <h1>Comments</h1>
+                {% for comment in post.comment_set.all %}
+                    <div class="pre-comments">
+                        <div class="user-detail">
+                            <p><b> {{comment.name}} </b></p>
+                            <span><small>{{comment.commented_date|date}}</small></span>
+                        </div>
+                        <div class="comment-text">
+                            {{comment.comment}}
+                        </div>
                     </div>
-                    <div class="comment-text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem omnis tenetur a vel iure dolor? Nobis explicabo distinctio nesciunt incidunt.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, saepe voluptas! Aliquid similique, consectetur adipisci perferendis porro eveniet? Facere, tempora.
-                    </div>
-                </div>
-                <div class="pre-comments">
-                    <div class="user-detail">
-                        <p><b> Chandan sharma</b></p>
-                        <span><small>20 may</small></span>
-                    </div>
-                    <div class="comment-text">
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem omnis tenetur a vel iure dolor? Nobis explicabo distinctio nesciunt incidunt.
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Cum, saepe voluptas! Aliquid similique, consectetur adipisci perferendis porro eveniet? Facere, tempora.
-                    </div>
-                </div>
+                    {% empty %}
+                    <p>NO COMMENTS YET.BE FIRST TO COMMENTS</p>
+                {%endfor%}
                 <h1>Write Your Comments</h1>
                 <form action="" method="post">
                     <label for="email">Email</label>
