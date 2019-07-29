@@ -42,9 +42,10 @@
                 </div>
                 <div class="Searchform">
                     <!-- for search -->
-                    <form method="post" class="search">
-                        <input type="text" placeholder="Search anything">
-                        <button type="submit">Search</button>
+                    <form method="post" class="search" action={% url 'show_posts' %}>
+                        {% csrf_token %}
+                        <input type="text" name='q' placeholder="Search anything">
+                        <input type="submit" value=Search>
                     </form>
                 </div>
             </div>
@@ -85,6 +86,10 @@
             {% block detail%}
 
             {% endblock%}
+            {% block comments%}
+            
+            {% endblock%}
+
             <!-- end post -->
         </div>
         <!-- end post-container -->
@@ -152,10 +157,10 @@
     <!-- side bar section -->
  
 <!-- end of side-bar section -->
-    <footer>
+    <!-- <footer>
         &copy;chandansharma
-    </footer>
+    </footer> -->
 
 </body>
-<script src="js/mobile.js"></script>
+<script src={% static 'js/mobile.js' %}></script>
 </html>
