@@ -13,7 +13,7 @@
                
                 <p><em>Posted By:{{post.author|title}},{{post.published_date|date}}</em></p>
                 <div class="detail-texts">
-                    {{post.detail}}
+                    {{post.detail|safe}}
                 </div>
             </div>
 
@@ -34,22 +34,17 @@
                     <p>NO COMMENTS YET.BE FIRST TO COMMENTS</p>
                 {%endfor%}
                 <h1>Write Your Comments</h1>
-                <form action="" method="post">
-                    <label for="email">Email</label>
-                    <input type="text" id="email" placeholder="Enter your email">
-                    <span><small>**We dont publish your email</small></span><br/>
-    
-                    <label for="name">Name</label>
-                    <input type="text" id="name" placeholder="Enter your name">
-    
-                    <label for="comment-text">Comment</label>
-                    <textarea name="" id="comment-text" placeholder="awesome post..."></textarea>
-                    <button type="submit">submit</button>
+                
+                <form method="POST">
+                    {% csrf_token %}
+                    {{form}}
+                    <input type="submit" value="Comment">
                 </form>
+                
+
             </div>
             <!-- end of comment area -->
-
-
+           
     
    <!-- end of post detail section -->
         </div>

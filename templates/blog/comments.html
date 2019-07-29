@@ -1,0 +1,12 @@
+
+{% block comments %}
+            <h1>Write Your Comments</h1>
+                <form method="GET">
+                    {% csrf_token %}
+                    {{form.as_table}}
+                    <button type="submit">submit</button>
+                </form>
+            </div>
+            <!-- end of comment area -->
+
+            {% endblock%}
